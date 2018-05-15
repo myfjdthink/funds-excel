@@ -8,6 +8,9 @@
 http://fund.eastmoney.com/data/fundranking.html
 https://bbs.feidee.com/thread-585239-1-1.html
 
+下载 excel
+直接请求； http://localhost:3000/excel
+
 ## Installation
 
 ```bash
