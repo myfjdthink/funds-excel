@@ -1,0 +1,68 @@
+{
+  "name": "funds-spy",
+  "version": "1.0.0",
+  "description": "downloads-funds-data-",
+  "author": "nick",
+  "license": "MIT",
+  "scripts": {
+    "format": "prettier --write \"**/*.ts\"",
+    "start": "ts-node -r tsconfig-paths/register src/main.ts",
+    "start:dev": "nodemon",
+    "prestart:prod": "rm -rf dist && tsc",
+    "start:prod": "node dist/main.js",
+    "start:hmr": "node dist/server",
+    "test": "jest",
+    "test:cov": "jest --coverage",
+    "test:e2e": "jest --config ./test/jest-e2e.json",
+    "webpack": "webpack --config webpack.config.js"
+  },
+  "dependencies": {
+    "@nestjs/common": "^5.0.0-beta.6",
+    "@nestjs/core": "^5.0.0-beta.6",
+    "@nestjs/microservices": "^5.0.0-beta.6",
+    "@nestjs/testing": "^5.0.0-beta.6",
+    "@nestjs/websockets": "^5.0.0-beta.6",
+    "exceljs": "^1.4.6",
+    "fastify-formbody": "^2.0.0",
+    "moment": "^2.22.1",
+    "reflect-metadata": "^0.1.12",
+    "rxjs": "^6.0.0",
+    "superagent": "^3.8.3",
+    "typescript": "^2.6.2",
+    "xlsx": "^0.12.12"
+  },
+  "devDependencies": {
+    "@types/express": "^4.0.39",
+    "@types/jest": "^21.1.8",
+    "@types/moment": "^2.13.0",
+    "@types/node": "^9.3.0",
+    "@types/superagent": "^3.5.8",
+    "@types/supertest": "^2.0.4",
+    "jest": "^21.2.1",
+    "nodemon": "^1.14.1",
+    "prettier": "^1.11.1",
+    "supertest": "^3.0.0",
+    "ts-jest": "^21.2.4",
+    "ts-loader": "^4.1.0",
+    "ts-node": "^4.1.0",
+    "tsconfig-paths": "^3.1.1",
+    "tslint": "5.3.2",
+    "tslint-config-klg": "^1.0.5",
+    "webpack": "^4.2.0",
+    "webpack-cli": "^2.0.13",
+    "webpack-node-externals": "^1.6.0"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "ts"
+    ],
+    "rootDir": "src",
+    "testRegex": ".spec.ts$",
+    "transform": {
+      "^.+\\.(t|j)s$": "ts-jest"
+    },
+    "coverageDirectory": "../coverage"
+  }
+}
